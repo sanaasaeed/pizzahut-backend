@@ -1,6 +1,7 @@
 <?php
 require('config/db.php');
 require('config/config.php');
+include('include/jquery.php');
 
 if (isset($_GET['submit'])) {
   if ($_GET['submit'] == 'signup') {
@@ -15,16 +16,30 @@ if (isset($_GET['submit'])) {
       $result = mysqli_query($link, $user_check_query);
       $user = mysqli_fetch_assoc($result);
       if ($user['email'] == $email) {
-        echo "<script type='text/javascript'>alert('Already Registered! Sign In');</script>";
+        echo "<script type='text/javascript'>
+        function onLoadAlert() {
+            alert('Already Registered! Sign In');
+        }
+        $(document).ready(onLoadAlert);
+        </script>";
       } else {
         $query = "INSERT INTO Customer VALUES('$name', '$email', '$password', '$contact', '$address')";
         if (mysqli_query($link, $query)) {
+          session_start();
+          $_SESSION['user'] = $name;
+          $_SESSION['user_email'] = $email;
+          header('Location: index.php');
         } else {
           echo "Error:" . mysqli_error($link);
         }
       }
     } else {
-      echo "<script type='text/javascript'>alert('Fill In all fields');</script>";
+      echo "<script type='text/javascript'>
+      function onLoadAlert() {
+          alert('Fill in all fields');
+      }
+      $(document).ready(onLoadAlert);
+      </script>";
     }
   }
   if ($_GET['submit'] == 'signin') {
@@ -39,9 +54,17 @@ if (isset($_GET['submit'])) {
       echo $row['email'];
       if ($result) {
         if ($row['email'] == $email && $row['pass'] == $password) {
+          session_start();
+          $_SESSION['user'] = $row['name'];
+          $_SESSION['user_email'] = $email;
           header('Location: index.php');
         } else {
-          echo "<script type='text/javascript'>alert('Invalid Email or password');</script>";
+          echo "<script type='text/javascript'>
+          function onLoadAlert() {
+              alert('Invalid Email or Password');
+          }
+          $(document).ready(onLoadAlert);
+          </script>";
         }
       }
     }
@@ -49,25 +72,6 @@ if (isset($_GET['submit'])) {
 }
 
 ?>
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <title>Sign in</title>
-  <!-- Required meta tags -->
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-
-  <!-- Bootstrap CSS -->
-  <link rel="shortcut icon" type="image/x-icon" href="images/logo.png" />
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
-
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.2/css/all.min.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css?family=Staatliches&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/sign.css" />
-  <link rel="stylesheet" href="css/styles.css" />
-  <link rel="stylesheet" href="css/mobile-sign.css" media="(max-width: 500px)" />
-</head>
 
 <body>
   <section id="pagenavbar">
@@ -84,11 +88,11 @@ if (isset($_GET['submit'])) {
             <li class="nav-item">
               <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
             </li>
-            <!-- <li class="nav-item">
-                    <a class="nav-link" href="#menu">Pizzas</a>
-                  </li> -->
             <li class="nav-item">
-              <a class="nav-link" href="#">Contact Us</a>
+              <a class="nav-link" href="index.php#menu">Pizzas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.php#contact">Contact Us</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="sign.html">Sign Up/In</a>

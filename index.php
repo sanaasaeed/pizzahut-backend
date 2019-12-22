@@ -1,18 +1,35 @@
 <?php
+session_start();
+print_r($_SESSION);
 require('config/config.php');
 require('config/db.php');
 if (isset($_GET['submit'])) {
-  $name = mysqli_real_escape_string($link, $_GET['name']);
-  $email = mysqli_real_escape_string($link, $_GET['email']);
-  $message = mysqli_real_escape_string($link, $_GET['message']);
+  if (!empty($_GET['name']) && !empty($_GET['email']) && !empty($_GET['message'])) {
+    $name = mysqli_real_escape_string($link, $_GET['name']);
+    $email = mysqli_real_escape_string($link, $_GET['email']);
+    $message = mysqli_real_escape_string($link, $_GET['message']);
 
-  $query = "INSERT INTO Contact(name,email,message) VALUES('$name', '$email', '$message')";
-  if (mysqli_query($link, $query)) {
-    header("Location: " . ROOT_URL . '');
+    $query = "INSERT INTO Contact(name,email,message) VALUES('$name', '$email', '$message')";
+    if (mysqli_query($link, $query)) {
+      header("Location: " . ROOT_URL . '');
+    } else {
+      echo "ERROR: " . mysqli_error($link);
+    }
   } else {
-    echo "ERROR: " . mysqli_error($link);
+    echo "<script type='text/javascript'>
+      function onLoadAlert() {
+          alert('Fill in all fields');
+      }
+      $(document).ready(onLoadAlert);
+      </script>";
   }
 }
+
+$query = "SELECT * FROM Pizza";
+$result = mysqli_query($link, $query);
+$row = mysqli_fetch_assoc($result);
+
+
 ?>
 <?php include('include/header.php')
 ?>
