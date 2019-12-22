@@ -1,0 +1,278 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Checkout - PizzaHut</title>
+    <!-- <link rel="stylesheet" href="css/styles.css" /> -->
+    <link rel="shortcut icon" type="image/x-icon" href="images/logo.png" />
+    <link rel="stylesheet" href="css/checkout.css" />
+    <link
+      rel="stylesheet"
+      href="css/mobile-checkout.css"
+      media="(max-width:980px)"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Staatliches&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <a class="navbar-brand logo" href="index.html">
+        <img src="images/logo.png" width="220" height="150" alt="" />
+      </a>
+      <button
+        class="navbar-toggler"
+        data-toggle="collapse"
+        data-target="#collapse_target"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse navbar-padding" id="collapse_target">
+        <ul class="navbar-nav navbar-right">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="#menu">Pizzas</a>
+          </li> -->
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sign.html">Sign Up/In</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <section id="checkout-header">
+      <div class="container">
+        <h2 class="checkout-heading">PERSONAL INFO</h2>
+      </div>
+    </section>
+
+    <section id="personal-info">
+      <div class="container">
+        <div class="grey-shade-personal info-padding">
+          <div class="row checkout-row">
+            <div class="col-lg-1"></div>
+
+            <div class="col-lg-4 personalinfo-p">
+              <h3 class="checkout-nameheadings">Name</h3>
+              <p>Talha Shafqat</p>
+
+              <h3 class="checkout-nameheadings">Contact</h3>
+              <p>0334-0707094</p>
+            </div>
+
+            <div class="col-lg-1"></div>
+
+            <div class="col-lg-4 personalinfo-p">
+              <h3 class="checkout-nameheadings">Email</h3>
+              <p>talha_shafqat98@yahoo.com</p>
+
+              <h3 class="checkout-nameheadings">Address</h3>
+              <p>H#123, St123, DHA Islamabad</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="checkout-header">
+      <div class="container">
+        <h2 class="checkout-heading">CHECKOUT</h2>
+      </div>
+    </section>
+
+    <section id="checkout">
+      <div class="container">
+        <div class="grey-shade">
+          <div class="row checkout-row">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-5 checkout-list">
+              <h3 class="checkout-nameheadings">Name</h3>
+              <p>1 - Chicken Tikka Pizza</p>
+              <p>2 - Chicken Tikka Pizza</p>
+              <p>3 - Chicken Tikka Pizza</p>
+            </div>
+
+            <div class="col-lg-4 Qty-list">
+              <h3 class="checkout-nameheadings">Quantity</h3>
+              <p>Qty:</p>
+              <select name="qty" required>
+                <option selected value="1">1 </option
+                ><option value="2">2 </option
+                ><option value="3">3 </option
+                ><option value="4">4 </option
+                ><option value="5">5 </option
+                ><option value="6">6 </option
+                ><option value="7">7 </option
+                ><option value="8">8 </option
+                ><option value="9">9 </option
+                ><option value="10">10 </option></select
+              >
+
+              <br />
+
+              <p>Qty:</p>
+              <select name="qty" required>
+                <option selected value="1">1 </option
+                ><option value="2">2 </option
+                ><option value="3">3 </option
+                ><option value="4">4 </option
+                ><option value="5">5 </option
+                ><option value="6">6 </option
+                ><option value="7">7 </option
+                ><option value="8">8 </option
+                ><option value="9">9 </option
+                ><option value="10">10 </option></select
+              >
+
+              <br />
+
+              <p>Qty:</p>
+              <select name="qty" required>
+                <option selected value="1">1 </option
+                ><option value="2">2 </option
+                ><option value="3">3 </option
+                ><option value="4">4 </option
+                ><option value="5">5 </option
+                ><option value="6">6 </option
+                ><option value="7">7 </option
+                ><option value="8">8 </option
+                ><option value="9">9 </option
+                ><option value="10">10 </option></select
+              >
+            </div>
+
+            <div class="col-lg-2 Price-list">
+              <h3 class="checkout-nameheadings">Price</h3>
+              <p>Rs 1,499</p>
+              <p>Rs 1,499</p>
+              <p>Rs 1,499</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="checkout mobile-checkout">
+      <div class="container">
+        <div class="grey-shade">
+          <div class="product-details">
+            <h2 class="product">1- Chicken Tikka Pizza</h2>
+            <div class="quantity-price mb-3">
+              <div class="quantity-gp">
+                <label for="quantity">Qty: </label>
+                <select name="quantity" id="quantity">
+                  <option selected value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+              </div>
+              <div class="price-gp">
+                <label for="price">Price: </label>
+                <p id="price">1200</p>
+              </div>
+            </div>
+            <h2 class="product">2- Chicken Tikka Pizza</h2>
+            <div class="quantity-price mb-3">
+              <div class="quantity-gp">
+                <label for="quantity">Qty: </label>
+                <select name="quantity" id="quantity">
+                  <option selected value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+              </div>
+              <div class="price-gp">
+                <label for="price">Price: </label>
+                <p id="price">1200</p>
+              </div>
+            </div>
+            <h2 class="product">3- Chicken Tikka Pizza</h2>
+            <div class="quantity-price mb-3">
+              <div class="quantity-gp">
+                <label for="quantity">Qty: </label>
+                <select name="quantity" id="quantity">
+                  <option selected value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+              </div>
+              <div class="price-gp">
+                <label for="price">Price: </label>
+                <p id="price">1200</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="total">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-9"></div>
+
+          <div class="col-lg-3">
+            <div class="red-box mb-3">
+              Total: Rs 5,500
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous"
+    ></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/core.js"></script> -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/scripts/smoothscroll.js"></script>
+  </body>
+</html>

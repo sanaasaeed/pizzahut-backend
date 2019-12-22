@@ -1,0 +1,166 @@
+body {
+  background-color: #100f0f !important;
+  /* height: 100vh; */
+  background: url(../images/pizza-overlay.png) center center/cover;
+}
+/* FONTS */
+@font-face {
+  font-family: "DKCrayonCrumble";
+  src: url("DKCrayonCrumble.eot?#iefix") format("embedded-opentype"),
+    url("DKCrayonCrumble.woff") format("woff"),
+    url("DKCrayonCrumble.ttf") format("truetype"),
+    url("DKCrayonCrumble.svg#DKCrayonCrumble") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins-ExtraBold";
+  src: url("Poppins-ExtraBold.eot?#iefix") format("embedded-opentype"),
+    url("Poppins-ExtraBold.woff") format("woff"),
+    url("Poppins-ExtraBold.ttf") format("truetype"),
+    url("Poppins-ExtraBold.svg#Poppins-ExtraBold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins-Medium";
+  src: url("Poppins-Medium.eot?#iefix") format("embedded-opentype"),
+    url("Poppins-Medium.woff") format("woff"),
+    url("Poppins-Medium.ttf") format("truetype"),
+    url("Poppins-Medium.svg#Poppins-Medium") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins-SemiBold";
+  src: url("Poppins-SemiBold.eot?#iefix") format("embedded-opentype"),
+    url("Poppins-SemiBold.woff") format("woff"),
+    url("Poppins-SemiBold.ttf") format("truetype"),
+    url("Poppins-SemiBold.svg#Poppins-SemiBold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* NAV BAR */
+.navbar-padding {
+  margin-left: 60%;
+}
+
+.navbar {
+  background-color: #100f0f !important; /* height: 80px !important; */
+}
+
+.nav-link {
+  margin-right: 30px !important;
+  font-family: "Staatliches", cursive;
+  color: #fff !important;
+  margin-top: 20px !important;
+  margin-bottom: 20px !important;
+  font-size: 20px;
+}
+
+.nav-link:hover {
+  color: #ee3a43 !important;
+  border-bottom: 2px solid #ee3a43 !important;
+  padding-top: 6px !important;
+}
+
+.logo {
+  position: absolute;
+  top: 1px;
+  left: 50px;
+  transform: rotate(-15deg);
+}
+
+/* PERSONAL INFORMATION */
+
+.info-padding {
+  margin-top: 40px;
+}
+
+.personalinfo-p {
+  color: #fff;
+  font-family: "Poppins-Medium", Arial, sans-serif;
+  font-size: 17px;
+}
+
+.grey-shade-personal {
+  background-color: #3c3c3c !important;
+  border-radius: 15px;
+  opacity: 0.9;
+}
+
+/* CHECK OUT */
+
+#checkout-header {
+  margin-top: 50px;
+}
+
+.checkout-heading {
+  color: #fff;
+  text-align: center;
+  font-family: "DKCrayonCrumble", Arial, sans-serif;
+  font-size: 55px;
+}
+
+.grey-shade {
+  background-color: #3c3c3c !important;
+  border-radius: 15px;
+  /* height: 300px; */
+  opacity: 0.9;
+}
+.checkout-nameheadings {
+  color: #ec2f39;
+  font-family: "Poppins-SemiBold", Arial, sans-serif;
+  font-size: 28px;
+  /* text-decoration-line: underline; */
+  margin-bottom: 10px;
+}
+.checkout-list {
+  margin-top: 5px;
+}
+
+.checkout-list p {
+  color: #fff;
+  font-family: "Poppins-Medium", Arial, sans-serif;
+  font-size: 20px;
+}
+.Qty-list p {
+  color: #fff;
+  font-family: "Poppins-Medium", Arial, sans-serif;
+  font-size: 20px;
+  margin-right: 20px;
+  display: inline;
+}
+.Qty-list select {
+  margin-bottom: 18px;
+}
+.Price-list p {
+  color: #fff;
+  font-family: "Poppins-Medium", Arial, sans-serif;
+  font-size: 20px;
+}
+.checkout-row {
+  padding-top: 30px;
+}
+
+.product-details {
+  display: none;
+}
+
+/* TOTAL */
+
+.red-box {
+  background-color: #ad2424 !important;
+  border-radius: 10px;
+  color: #fff;
+  font-family: "Poppins-Medium", Arial, sans-serif;
+  text-align: center;
+  font-size: 24px;
+}
+
+#total {
+  margin-top: 10px;
+}

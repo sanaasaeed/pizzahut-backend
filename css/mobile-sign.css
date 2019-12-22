@@ -1,0 +1,31 @@
+.flex {
+  text-align: center;
+}
+
+.container {
+  margin-top: 130px;
+}
+
+p {
+  font-size: 14px;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+.container {
+  min-height: 480px;
+}
+
+.form-container form {
+  padding: 0 10px;
+}
+
+.form-container input {
+  padding: 9px 11px;
+  border-radius: 10px;
+}
+.nav-link {
+  margin-bottom: 0;
+}

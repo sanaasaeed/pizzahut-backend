@@ -1,0 +1,249 @@
+body {
+  background-color: #100f0f !important;
+}
+
+/* FONTS */
+@font-face {
+  font-family: "DKCrayonCrumble";
+  src: url("DKCrayonCrumble.eot?#iefix") format("embedded-opentype"),
+    url("DKCrayonCrumble.woff") format("woff"),
+    url("DKCrayonCrumble.ttf") format("truetype"),
+    url("DKCrayonCrumble.svg#DKCrayonCrumble") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins-ExtraBold";
+  src: url("Poppins-ExtraBold.eot?#iefix") format("embedded-opentype"),
+    url("Poppins-ExtraBold.woff") format("woff"),
+    url("Poppins-ExtraBold.ttf") format("truetype"),
+    url("Poppins-ExtraBold.svg#Poppins-ExtraBold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* NAV BAR */
+.navbar-padding {
+  margin-left: 60%;
+}
+
+.navbar {
+  background-color: #100f0f !important;
+  /* padding-bottom: 30px !important;
+  padding-top: 20px !important; */
+  /* height: 80px !important; */
+}
+
+.nav-link {
+  margin-right: 30px !important;
+  font-family: "Staatliches", cursive;
+  color: #fff !important;
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.nav-link:hover {
+  color: #ee3a43 !important;
+  border-bottom: 2px solid #ee3a43 !important;
+  padding-top: 6px !important;
+}
+
+.logo {
+  position: absolute;
+  top: 1px;
+  left: 50px;
+  transform: rotate(-15deg);
+}
+
+/* LANDING PAGE */
+
+#landing-slide {
+  background-image: url("landing-page.jpg");
+  height: 700px !important;
+  background-size: cover;
+}
+.align {
+  text-align: center;
+}
+.text {
+  text-align: center;
+  margin-top: 25%;
+  color: #fff;
+  font-size: 92px !important;
+  font-family: "DKCrayonCrumble", Arial, sans-serif;
+}
+
+.orderbtn {
+  background-color: #f58b54 !important;
+  border-color: #f58b54 !important;
+  color: #fff !important;
+  font-family: "Poppins-ExtraBold", Arial, sans-serif;
+  /* font-family: "Poppins", sans-serif; */
+  font-size: 32px !important;
+  margin-top: 50px;
+  padding: 10px 20px !important;
+  border-radius: 5px !important;
+}
+
+.orderbtn:hover {
+  background-color: #cb6733 !important;
+  border-color: #cb6733 !important;
+}
+
+/* LANDING PAGE MEDIA QUIRIES */
+
+@media (max-width: 600px) {
+  .mobile-heading {
+    background-color: #3c3c3c !important;
+    border-radius: 5px;
+    padding: 10px;
+    opacity: 0.9;
+  }
+  .text {
+    font-size: 70px !important;
+  }
+  .nav-link {
+    margin-bottom: 0;
+  }
+}
+
+/* MENU HEADER */
+
+.menu-heading,
+.deal-heading {
+  text-align: center;
+  font-family: "DKCrayonCrumble", Arial, sans-serif;
+  color: #fff;
+  font-size: 50px;
+  margin-top: 80px;
+}
+
+/* MENU SECTION */
+
+#menu {
+  margin-top: 80px;
+}
+.grey-shade {
+  background-color: #3c3c3c !important;
+  border-radius: 15px;
+}
+.pizza-pic {
+  text-align: center;
+  padding-top: 10px !important;
+}
+
+.pizza-name {
+  padding: 15px 25px 10px;
+}
+
+.pizza-heading {
+  color: #fff;
+}
+
+.pizza-description {
+  padding: 0 25px;
+  font-size: 11px !important;
+  color: #f7f7f7 !important;
+}
+
+.time {
+  margin-left: 23px !important;
+}
+.time-text {
+  font-size: 12px;
+  color: #f7f7f7 !important;
+}
+.time-padding1 {
+  padding-right: 0 !important;
+}
+.time-padding2 {
+  padding-left: 0 !important;
+  margin-top: 5px;
+}
+.buynow-btn {
+  background-color: #ee3a43 !important;
+  color: #fff !important;
+  font-size: 11px !important;
+  text-align: right !important;
+}
+.buy-btn {
+  text-align: right;
+}
+
+.lower-row {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.lower-pad {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 20px;
+}
+
+/* MENU MEDIA QURIES */
+
+@media (max-width: 600) {
+  .menu-media-padding {
+    margin-top: 10px !important;
+  }
+}
+
+footer {
+  background: #cb6733;
+}
+
+.ftr-copy {
+  font-weight: bold;
+}
+
+/* Contact us */
+
+.container-form {
+  /* text-align: center; */
+  padding: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+.form-group:nth-child(1) {
+  width: 30%;
+}
+.form-group:nth-child(2) {
+  width: 50%;
+}
+
+.form-group input {
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.form-group label {
+  color: #ee3a43;
+  font-weight: bold;
+}
+
+.form-group textarea {
+  border: none;
+  border-radius: 5px;
+  /* padding: 10px; */
+}
+
+.div-submit {
+  text-align: center;
+  color: #fff !important;
+  font-family: "Poppins-ExtraBold", Arial, sans-serif;
+}
+
+.btn-submit {
+  background-color: #ee3a43 !important;
+  border-color: #ee3a43 !important;
+  color: #fff !important;
+}

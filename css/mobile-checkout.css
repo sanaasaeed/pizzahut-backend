@@ -1,0 +1,48 @@
+.checkout-heading {
+  padding-top: 50px;
+}
+
+#personal-info {
+  text-align: center;
+}
+
+.product-details {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+}
+
+.quantity-price {
+  display: flex;
+  justify-content: space-around;
+}
+
+.price-gp {
+  display: flex;
+}
+.price-gp #price {
+  margin-left: 25px;
+}
+
+/* .checkout-heading {
+  margin-top: -70px;
+} */
+
+section#checkout {
+  display: none;
+}
+
+.product {
+  color: #ec2f39;
+  /* color: rgb(218, 56, 56); */
+  font-family: "Poppins-SemiBold", Arial, sans-serif;
+  font-size: 1.5rem;
+}
+
+.product-details p,
+.product-details label {
+  color: #fff;
+  font-family: "Poppins-Medium", Arial, sans-serif;
+  font-size: 17px;
+}
