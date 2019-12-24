@@ -127,13 +127,13 @@ body {
   font-family: "Poppins-Medium", Arial, sans-serif;
   font-size: 20px;
 }
-.Qty-list p {
+/* .Qty-list p {
   color: #fff;
   font-family: "Poppins-Medium", Arial, sans-serif;
   font-size: 20px;
   margin-right: 20px;
   display: inline;
-}
+} */
 .Qty-list select {
   margin-bottom: 18px;
 }
@@ -144,10 +144,6 @@ body {
 }
 .checkout-row {
   padding-top: 30px;
-}
-
-.product-details {
-  display: none;
 }
 
 /* TOTAL */
@@ -164,7 +160,23 @@ body {
 #total {
   margin-top: 10px;
 }
-.table-headings {
+.grey-shade .table-heading {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
+}
+
+.grey-shade .order-items {
+  display: flex;
+  justify-content: space-around;
+}
+.div-submit {
+  text-align: center;
+  color: #fff !important;
+  font-family: "Poppins-ExtraBold", Arial, sans-serif;
+}
+
+.btn-submit {
+  background-color: #ad2424 !important;
+  border-color: #ad2424 !important;
+  color: #fff !important;
 }

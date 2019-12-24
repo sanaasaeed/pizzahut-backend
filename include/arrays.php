@@ -33,7 +33,7 @@ if (isset($_SESSION['user'])) {
       'title' => 'contact us'
     ),
     array(
-      'href' => '#',
+      'href' => 'checkout.php',
       'title' => $username
     ),
     array(

@@ -1,6 +1,5 @@
 <?php
 session_start();
-print_r($_SESSION);
 require('config/config.php');
 require('config/db.php');
 if (isset($_GET['submit'])) {
@@ -24,11 +23,6 @@ if (isset($_GET['submit'])) {
       </script>";
   }
 }
-
-$query = "SELECT * FROM Pizza";
-$result = mysqli_query($link, $query);
-$row = mysqli_fetch_assoc($result);
-
 
 ?>
 <?php include('include/header.php')
@@ -57,232 +51,55 @@ $row = mysqli_fetch_assoc($result);
 
 <section id="menu">
   <div class="container">
-    <div class="row">
-      <div class="col-lg-4 col-sm-6 mb-4">
-        <div class="grey-shade">
-          <div class="pizza-pic">
-            <img src="images/pizza.png" alt="pizza picture" height="180px" width="180px" />
+    <div class='row'>
+      <?php
+      $query = "SELECT * FROM Pizza";
+      $result = mysqli_query($link, $query);
+      $count = 0;
+      while ($row = mysqli_fetch_assoc($result)) {
+        $count++;
+        echo "<div class='col-lg-4 col-sm-6 mb-4'>
+        <div class='grey-shade'>
+          <div class='pizza-pic'>
+            <img src='images/pizzas/" . $row['pizza_name'] . ".jpeg' alt='pizza picture' height='180px' width='250px' />
           </div>
 
-          <div class="pizza-name">
-            <h4 class="pizza-heading">Chicken Tikka</h4>
+          <div class='pizza-name'>
+            <h4 class='pizza-heading'>" . $row['pizza_name'] . "</h4>
           </div>
 
-          <div class="pizza-description">
+          <div class='pizza-description'>
             <p>
-              Lorem Ipsum is simply dummy text of the printing and
-              typesetting industry. Lorem Ipsum has been the industry's
-              standard dummy text ever since the 1500s, w
+              " . $row['pizza_des'] . "
             </p>
           </div>
 
-          <div class="row lower-pad">
-            <div class="col-lg-6  time">
-              <div class="row">
-                <div class="col-lg-4  time-padding1">
-                  <img src="images/clock.svg" alt="clock pic" height="30px" width="30px" />
+          <div class='row lower-pad'>
+            <div class='col-lg-6 time'>
+              <div class='row'>
+                <div class='col-lg-4 time-padding1'>
+                  <img src='images/clock.svg' alt='clock pic' height='30px' width='30px' />
                 </div>
-                <div class="col-lg-6  time-padding2">
-                  <p class="time-text">20-30 Mins</p>
+                <div class='col-lg-6 time-padding2'>
+                  <p class='time-text'>20-30 Mins</p>
                 </div>
               </div>
             </div>
 
-            <div class="col-lg-5 buy-btn">
-              <a href="checkout.html" class="btn buynow-btn">BUY NOW</a>
+            <div class='col-lg-5 buy-btn'>
+              <a href='cart.php?id=" . $row['pizza_id'] . "' class='btn buynow-btn'>BUY NOW</a>
             </div>
           </div>
         </div>
       </div>
+      ";
+        if ($count === 3) {
+          echo "</div> <div class='row'>";
+        }
+      }
 
-      <div class="col-lg-4 col-sm-6 mb-4">
-        <div class="grey-shade">
-          <div class="pizza-pic">
-            <img src="images/pizza.png" alt="pizza picture" height="180px" width="180px" />
-          </div>
-
-          <div class="pizza-name">
-            <h4 class="pizza-heading">Chicken Tikka</h4>
-          </div>
-
-          <div class="pizza-description">
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and
-              typesetting industry. Lorem Ipsum has been the industry's
-              standard dummy text ever since the 1500s, w
-            </p>
-          </div>
-
-          <div class="row lower-pad">
-            <div class="col-lg-6 time">
-              <div class="row">
-                <div class="col-lg-4 time-padding1">
-                  <img src="images/clock.svg" alt="clock pic" height="30px" width="30px" />
-                </div>
-                <div class="col-lg-6 time-padding2">
-                  <p class="time-text">20-30 Mins</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-5 buy-btn">
-              <a href="checkout.html" class="btn buynow-btn">BUY NOW</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-sm-6 mb-4">
-        <div class="grey-shade">
-          <div class="pizza-pic">
-            <img src="images/pizza.png" alt="pizza picture" height="180px" width="180px" />
-          </div>
-
-          <div class="pizza-name">
-            <h4 class="pizza-heading">Chicken Tikka</h4>
-          </div>
-
-          <div class="pizza-description">
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and
-              typesetting industry. Lorem Ipsum has been the industry's
-              standard dummy text ever since the 1500s, w
-            </p>
-          </div>
-
-          <div class="row lower-pad">
-            <div class="col-lg-6 time">
-              <div class="row">
-                <div class="col-lg-4 time-padding1">
-                  <img src="images/clock.svg" alt="clock pic" height="30px" width="30px" />
-                </div>
-                <div class="col-lg-6 time-padding2">
-                  <p class="time-text">20-30 Mins</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-5 buy-btn">
-              <a href="checkout.html" class="btn buynow-btn">BUY NOW</a>
-            </div>
-          </div>
-        </div>
-      </div>
+      ?>
     </div>
-
-    <div class="row lower-row">
-      <div class="col-lg-4 col-sm-6 mb-4">
-        <div class="grey-shade">
-          <div class="pizza-pic">
-            <img src="images/pizza.png" alt="pizza picture" height="180px" width="180px" />
-          </div>
-
-          <div class="pizza-name">
-            <h4 class="pizza-heading">Chicken Tikka</h4>
-          </div>
-
-          <div class="pizza-description">
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and
-              typesetting industry. Lorem Ipsum has been the industry's
-              standard dummy text ever since the 1500s, w
-            </p>
-          </div>
-
-          <div class="row lower-pad">
-            <div class="col-lg-6 time">
-              <div class="row">
-                <div class="col-lg-4 time-padding1">
-                  <img src="images/clock.svg" alt="clock pic" height="30px" width="30px" />
-                </div>
-                <div class="col-lg-6 time-padding2">
-                  <p class="time-text">20-30 Mins</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-5 buy-btn">
-              <a href="checkout.html" class="btn buynow-btn">BUY NOW</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-sm-6 mb-4">
-        <div class="grey-shade">
-          <div class="pizza-pic">
-            <img src="images/pizza.png" alt="pizza picture" height="180px" width="180px" />
-          </div>
-
-          <div class="pizza-name">
-            <h4 class="pizza-heading">Chicken Tikka</h4>
-          </div>
-
-          <div class="pizza-description">
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and
-              typesetting industry. Lorem Ipsum has been the industry's
-              standard dummy text ever since the 1500s, w
-            </p>
-          </div>
-
-          <div class="row lower-pad">
-            <div class="col-lg-6 time">
-              <div class="row">
-                <div class="col-lg-4 time-padding1">
-                  <img src="images/clock.svg" alt="clock pic" height="30px" width="30px" />
-                </div>
-                <div class="col-lg-6 time-padding2">
-                  <p class="time-text">20-30 Mins</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-5 buy-btn">
-              <a href="checkout.html" class="btn buynow-btn">BUY NOW</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-sm-6 mb-4">
-        <div class="grey-shade">
-          <div class="pizza-pic">
-            <img src="images/pizza.png" alt="pizza picture" height="180px" width="180px" />
-          </div>
-
-          <div class="pizza-name">
-            <h4 class="pizza-heading">Chicken Tikka</h4>
-          </div>
-
-          <div class="pizza-description">
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and
-              typesetting industry. Lorem Ipsum has been the industry's
-              standard dummy text ever since the 1500s, w
-            </p>
-          </div>
-
-          <div class="row lower-pad">
-            <div class="col-lg-6 time">
-              <div class="row">
-                <div class="col-lg-4 time-padding1">
-                  <img src="images/clock.svg" alt="clock pic" height="30px" width="30px" />
-                </div>
-                <div class="col-lg-6 time-padding2">
-                  <p class="time-text">20-30 Mins</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-5 buy-btn">
-              <a href="checkout.html" class="btn buynow-btn">BUY NOW</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 </section>
 
 <section id="deal-header">
@@ -318,7 +135,7 @@ $row = mysqli_fetch_assoc($result);
     <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="sr-only">Next</span>
-    </a>
+    </a>6
   </div>
 </section>
 
@@ -344,4 +161,29 @@ $row = mysqli_fetch_assoc($result);
     </div>
   </form>
 </section>
+
+<section>
+  <div class="container mt-5">
+    <div class="mapouter">
+      <div class="gmap_canvas"><iframe width="1000" height="600" id="gmap_canvas" src="https://maps.google.com/maps?q=comsats%20university%20islamabad&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.embedgooglemap.net/coupon/">embedgooglemap.net</a></div>
+      <style>
+        .mapouter {
+          position: relative;
+          text-align: right;
+          height: 600px;
+          width: 1000px;
+        }
+
+        .gmap_canvas {
+          overflow: hidden;
+          background: none !important;
+          height: 600px;
+          width: 1000px;
+        }
+      </style>
+    </div>
+  </div>
+
+</section>
+
 <?php include('include/footer.php') ?>
